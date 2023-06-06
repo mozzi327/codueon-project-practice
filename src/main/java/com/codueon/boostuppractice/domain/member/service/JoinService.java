@@ -9,11 +9,22 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * 일반 사용자 회원가입 서비스 클래스
+ *
+ * @author mozzi327
+ */
 @Service
 @RequiredArgsConstructor
 public class JoinService {
     private final MemberRepository memberRepository;
 
+    /**
+     * 일반 회원가입 서비스 메서드
+     *
+     * @param joinMember 회원가입 정보
+     * @author mozzi327
+     */
     public void joinMember(MemberDto.Join joinMember) {
         // TODO : 닉네임 중복, 이메일 중복 확인
 

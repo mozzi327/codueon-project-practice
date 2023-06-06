@@ -4,13 +4,20 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * 회원 도메인 Dto 클래스
+ * @author mozzi327
+ */
 public class MemberDto {
+    /**
+     * 일반 회원가입 이너 클래스
+     * @author mozzi327
+     */
     @Getter
-    @NoArgsConstructor
     public static class Join {
-        private String email;
-        private String password;
-        private String nickname;
+        private final String email;
+        private final String password;
+        private final String nickname;
 
         @Builder
         public Join(String email, String password, String nickname) {
